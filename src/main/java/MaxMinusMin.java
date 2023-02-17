@@ -10,6 +10,9 @@ public class MaxMinusMin {
      * @return the max value of nums minus the min value of nums.
      */
     public int difference(List<Integer> nums){
-        return 0;
+        int macks = nums .stream() .mapToInt(v -> v) .max() .orElseThrow();
+        int mynn = nums .stream() .mapToInt(v -> v) .min() .orElseThrow();
+        return macks - mynn;
     }
-}
+
+    }
